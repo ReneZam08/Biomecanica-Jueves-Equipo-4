@@ -1,0 +1,121 @@
+  \documentclass{article}
+\setlength{\parskip}{5pt} % esp. entre parrafos
+\setlength{\parindent}{0pt} % esp. al inicio de un parrafo
+\usepackage{amsmath} % mates
+\usepackage[sort&compress,numbers]{natbib} % referencias
+\usepackage{url} % que las URLs se vean lindos
+\usepackage[top=25mm,left=20mm,right=20mm,bottom=25mm]{geometry} % margenes
+\usepackage{hyperref} % ligas de URLs
+\usepackage{graphicx} % poner figuras
+\usepackage[spanish]{babel} % otros idiomas
+\usepackage[utf8]{inputenc}
+\usepackage{float}
+\author{Ana Lucio,
+Ana Carbajal,
+Eduardo Rivera,
+César Luna,
+René Zamora} % author
+\title{Tarea 3} % titulo
+\date{\today}
+
+\begin{document} % inicia contenido
+
+\maketitle % cabecera
+\begin{abstract} % resumen
+En esta actividad se realizó una gráfica la cual describe el comportamiento acerca de cómo se comporta la aproximación al número pi, utilizando el programa python, también se vio lo que es el método Monte Carlo y cómo se puede utilizar.
+\end{abstract}
+
+\section{Introducción}\label{intro} % seccion y etiqueta
+l término Monte Carlo se aplica a un conjunto de métodos matemáticos que se empezaron a usar en los 40s para el desarrollo de armas nucleares en Los Álamos. Consisten en resolver un problema mediante la invención de juegos de azar cuyo comportamiento simula algún fenómeno real gobernado por una distribución de probabilidad o sirve para realizar un cálculo. Más técnicamente, un Monte Carlo es un proceso estocástico numérico, es decir, una secuencia de estados cuya evolución viene determinada por sucesos aleatorios. 
+Se utilizará este método junto con un lenguaje de alto nivel de programación; ‘Phyton’, este se emplea para desarrollar aplicaciones de todo tipo y en este caso lo usaremos para conocer el comportamiento de la aproximación al número pi.
+
+
+\section{Desarrollo}
+\subsection{Método Monte Carlo}
+Los Métodos de Monte-Carlo son técnicas para analizar fenómenos por medio de algoritmos computacionales, que utilizan y dependen fundamentalmente de la generación de números aleatorios.\\
+
+El uso de los métodos de Montecarlo como herramienta de investigación proviene del trabajo realizado en el desarrollo de la bomba atómica durante la Segunda Guerra Mundial en el Laboratorio Nacional de Los Álamos en EE. UU\cite{1}. Este trabajo conllevaba la simulación de problemas probabilísticos de hidrodinámica concernientes a la difusión de neutrones en el material de fisión. Esta difusión posee un comportamiento eminentemente aleatorio. En la actualidad es parte fundamental de los algoritmos de raytracing para la generación de imágenes 3D.\\
+
+El uso de este método es para aproximar el valor de Pi; consiste en dibujar un cuadrado y dentro de ese cuadrado dibujar un círculo con diámetro de igual medición que uno de los lados del cuadrado, después se dibujan puntos de manera aleatoria sobre la superficie dibujada.
+\begin{enumerate}
+\item Dibuja un círculo unitario, y al cuadrado de lado 2 que lo inscribe.
+\item Lanza un número {\displaystyle n}n de puntos aleatorios uniformes dentro del cuadrado.
+\item Cuenta el número de puntos dentro del círculo, i.e. puntos cuya distancia al origen es menor que 1.
+\item El cociente de los puntos dentro del círculo dividido entre n es un estimado de, pi/4. Multiplica el resultado por 4 para estimar pi.
+\end{enumerate}
+
+En este cálculo se tienen que hacer dos consideraciones importantes:
+
+\begin{itemize}
+\item Si los puntos no están uniformemente distribuidos, el método es inválido.
+\item La aproximación será pobre si solo se lanzan unos pocos puntos. En promedio, la aproximación mejora conforme se aumenta el número de puntos.
+\end{itemize}
+
+
+\textbf{*Aplicaciones del método Monte Carlo}\cite{2}.
+
+\begin{itemize}
+\item Transporte de la radiación en la materia.
+\item Calculo integral.
+\item Teoría de transporte
+\item Problemas de optimización
+\end{itemize}
+\subsection{Código y Gráfica}
+A continuación los códigos y gráficas que se realizaron aplicando el Método Monte Carl\cite{3}.
+
+
+\begin{figure} [htp]% figura
+    \centering
+    \includegraphics[width=140mm]{Imágenes/Código1.jpg} % archivo
+    \caption{Código con aproximamiento a n=10000}
+    \label{grafica}
+\end{figure}
+
+
+
+\begin{figure} [htp]% figura
+    \centering
+    \includegraphics[width=65mm]{Imágenes/Gráfica1.jpg} % archivo
+    \caption{Gráfica con aproximamiento a n=10000}
+    \label{grafica 1}
+\end{figure}
+
+
+\begin{figure} [htp]% figura
+    \centering
+    \includegraphics[width=140mm]{Imágenes/Código2.jpg} % archivo
+    \caption{Código con aproximamiento a n=1000000}
+    \label{grafica}
+\end{figure}
+
+\begin{figure} [htp]% figura
+    \centering
+    \includegraphics[width=75mm]{Imágenes/Gráfica2.jpg} % archivo
+    \caption{Gráfica con aproximamiento a n=1000000}
+    \label{grafica}
+\end{figure}
+\nexpage
+
+\begin{figure} [htp]% figura
+    \centering
+    \includegraphics[width=140mm]{Imágenes/codigo3.jpg} % archivo
+    \caption{Código de convergimiento del número pi}
+    \label{grafica}
+\end{figure}
+
+\begin{figure} [htp]% figura
+    \centering
+    \includegraphics[width=75mm]{Imágenes/Figure_1.png} % archivo
+    \caption{Gráfica de convergimiento del número pi}
+    \label{grafica}
+\end{figure}
+\newpage
+
+\section{Conclusiones}
+Gracias a esta actividad nuestro equipo pudo entender mejor el origen del número “pi”, también pudimos aprender el método Montecarlo el cual es una secuencia de estados cuya evolución viene determinada por sucesos meramente aleatorios. Todo esto lo desarrollamos mediante el lenguaje de programación Python,  una vez sacando las aproximaciones al número pi se tabuló y conforme a eso se grafico.
+
+
+
+\bibliography{bib}
+\bibliographystyle{plainnat}
+\end{document}
