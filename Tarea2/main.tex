@@ -1,0 +1,223 @@
+   \documentclass{article}
+\setlength{\parskip}{5pt} % esp. entre parrafos
+\setlength{\parindent}{0pt} % esp. al inicio de un parrafo
+\usepackage{amsmath} % mates
+\usepackage[sort&compress,numbers]{natbib} % referencias
+\usepackage{url} % que las URLs se vean lindos
+\usepackage[top=25mm,left=20mm,right=20mm,bottom=25mm]{geometry} % margenes
+\usepackage{hyperref} % ligas de URLs
+\usepackage{graphicx} % poner figuras
+\usepackage[spanish]{babel} % otros idiomas
+\usepackage[utf8]{inputenc}
+\usepackage{float}
+\author{Ana Lucio,
+Ana Carbajal,
+Eduardo Rivera,
+César Luna,
+René Zamora} % author
+\title{Tarea 2} % titulo
+\date{\today}
+
+\begin{document} % inicia contenido
+
+\maketitle % cabecera
+\begin{abstract} % resumen
+En esta actividad se realizó una investigación acerca de la anatomía de la mano y nos enfocamos en prótesis para esta misma, viendo algunos ejemplos de ella y conociendo algunos tipos de mecanismos, a su vez también se vieron algunas ecuaciones y simulaciones para tener una mejor comprensión de lo que se está estudiando.
+\end{abstract}
+
+\section{Introducción}\label{intro} % seccion y etiqueta
+La anatomía de la mano constituye uno de los elementos más fascinantes y complejos del  cuerpo  humano. Su estudio data de tiempos prehistóricos y por su importancia en el devenir cotidiano, continuamente se han descrito  múltiples hallazgos gracias a herramientas novedosas acompañadas de un  extenso trabajo por parte de anatomistas, cirujanos, e incluso artistas que configuraron lo que actualmente conocemos de esta estructura\cite{2}.
+La gran destreza y la versatilidad de la mano se debe en gran medida a sus músculos intrínsecos. No cabe duda de que la disposición  anatómica de la mano es lo que le ha otorgado gran variedad de adaptaciones funcionales en  un momento determinado de acuerdo a la necesidad de su  ejecutante. 
+Ligar el complejo de su arquitectura con los diferentes conceptos de la biomecánica, permite entender que la función prensil \cite{1} de la mano depende de la integridad de la cadena cinética de huesos y articulaciones extendida desde la muñeca hasta las falanges distales, y que el compromiso de sus arcos longitudinales o transversales altera la morfología de la mano e implica la ruptura de un ensamblaje coordinado necesario para la realización de agarres de fuerza y de precisión.
+
+
+\section{Desarrollo}
+
+
+\subsection{\textbf{*Mecanismos}}
+Tipos de mecanismos:
+
+\begin{itemize}
+\item Transmisión lineal: palancas, poleas, polipasto.
+\item Transmisión circular: ruedas de fricción, poleas con correas, engranajes, engranajes con cadena.
+\item Transformación del movimiento lineal-circular: piñón-cremallera, torno, tornillo-tuerca.
+\item Transformación de movimiento circular-alternativo: Biela-manivela, leva, excéntrica.
+\end{itemize}
+
+A continuación se muestran dos ejemplos de una mano robótica junto con los diferentes mecanismos que fueron utilizados.
+
+\textbf{Mano NAIST}
+
+Tiene 4 dedos, en conjunto suman 12 grados de libertad de cada movimiento; cada dedo tiene 3 grados de libertad; dos en la articulación del dedo con la palma y uno en la falange media del dedo\cite{3}. Todos los actuadores están incluidos en la palma; las articulaciones se mueven gracias a engranajes especialmente diseñados, no utilizan alambres como tendones.
+
+\begin{figure} [htp]% figura
+    \centering
+    \includegraphics[width=50mm]{Figura1.png} % archivo
+    \caption{Mano NAIST}
+    \label{grafica}
+\end{figure}
+
+\begin{itemize}
+\item Mecanismo de engranajes 
+\end{itemize}
+Debido a que la articulación MP tiene 2 grados de libertad, es difícil mover la articulación de la falange PIP con un mecanismo ubicado en la palma de la mano, enlazado mecánicamente. Por lo tanto, en los mecanismos convencionales de una mano robótica los motores para las articulaciones PIPI/DIP se incluyen en la propia articulación del dedo; esto impone una restricción de tamaño, por lo que no se pueden utilizar motores con suficiente fuerza.
+En el concepto de diseño de la mano NAIST, los 3 actuadores están dentro de la palma; el motor 1 es para aducción/abducción de la articulación MP (movimiento lateral del dedo en la palma), el 2 para flexión/extensión de MP (flexión del dedo completo), y el 3 para flexión/extensión de PIP (flexión de las falanges media y la del extremo del dedo; son los engranajes dorados).
+
+\begin{itemize}
+\item Sensor táctil de la punta de los dedos
+\end{itemize}
+Utiliza un sensor para obtener una realimentación táctil de la presión de los dedos sobre un objeto que toma con la mano robótica
+
+\textbf{Mano robótica Shadow Dextrous}
+
+Es un sistema de mano humanoide que reproduce 24 grados de libertad de movimiento de la mano, de la manera más exacta posible; ha sido diseñada para que tenga una fuerza y sensibilidad al movimiento comparables a los de la mano humana.
+Se trata de un sistema completo, autocontenido. La sección del antebrazo contiene los músculos y las válvulas que los manejan. El sistema incorpora los controles necesarios para el control de la mano, entre ellos programas de computadora bajo la licencia GNU GPL.
+
+\begin{figure} [htp]% figura
+    \centering
+    \includegraphics[width=18mm]{Figura2.png} % archivo
+    \caption{Mano robótica Shadow Dextrous}
+    \label{grafica}
+\end{figure}
+
+\begin{itemize}
+\item Sensores de posición
+\end{itemize}
+La rotación de las articulaciones se mide con sensores de efecto Hall que tienen una resolución típica de 0,2 grados. Estos datos se digitalizan localmente con convertidores analógico / digitales de 12 bits. La velocidad de muestreo se puede configurar hasta llegar a un máximo de 180 Hz.
+
+\begin{itemize}
+\item Sensores de presión
+\end{itemize}
+La presión en cada músculo se mide con sensores de presión de estado sólido colocados directamente en las válvulas. Se mide con una resolución de 12 bits en un rango de 0 a 4 bars.
+
+\begin{itemize}
+\item Músculos de aire
+\end{itemize}
+Los músculos de aire (Air Muscles) o, músculos neumáticos, se comportan de una manera muy similar a un músculo biológico. Cuando se les insufla aire comprimido, se contraen hasta alcanzar un 40 por ciento de su longitud original. A medida que se van contrayendo, la fuerza que ejercen se reduce, pero la primera parte del recorrido es suficientemente potente. Por esa razón, por lo general se los utiliza ampliando el movimiento por medio de una palanca.
+
+\subsection{Anatomía de la mano}
+
+La mano está compuesta de diferentes huesos, músculos, y ligamentos que permiten una gran cantidad de movimientos y destrezas\cite{4}. Existen tres principales tipos de huesos en la mano, entre los cuales se incluyen:
+
+\begin{itemize}
+\item Falanges: Los 14 huesos que están en los dedos de cada mano y también en los dedos de cada pie. Cada dedo tiene tres falanges (distal, media y proximal); solamente el pulgar tiene dos.
+\item Huesos metacarpianos: Los cinco huesos que componen la parte media de la mano.
+\item Huesos carpianos. Los ocho huesos que forman la muñeca. Los huesos carpianos están conectados a dos huesos del brazo--el hueso cúbito y el hueso radio.
+\end{itemize}
+\begin{figure} [htp]% figura
+    \centering
+    \includegraphics[width=80mm]{Figura3.png} % archivo
+    \caption{Anatomía de la mano}
+    \label{grafica}
+\end{figure}
+En la mano se pueden encontrar numerosos músculos, ligamentos, y vainas. Los músculos son estructuras que se contraen y permiten el movimiento de los huesos de la mano. Los ligamentos son tejidos fibrosos que ayudan a unir las articulaciones de la mano. Las vainas son estructuras tubulares que rodean parte de los dedos.
+La mano tiene, en total, 25 articulaciones y permiten la realización de 58 movimientos diferentes. La articulación de la muñeca es una de las más complejas de la anatomía humana. Está formada a su vez por tres articulaciones que trabajan entre sí para posibilitar hasta 4 tipos de movimientos distintos.
+\subsection{Tipos de protesis}
+El progreso de las prótesis ha estado y está ligado al manejo de los materiales que el hombre emplea, también en el desarrollo de la tecnología y por último el entender la biomecánica que tiene el cuerpo humano, es por eso que se podrían clasificar las prótesis en activas y pasivas; esto quiere decir que una prótesis pasiva es la que no posee elementos o dispositivos electrónicos u otros, que su funcionalidad está dada por fuerzas que proporciona el mismo usuario o que por inercia se van dando, en la Figura 5 se muestra una prótesis pasiva; mientras que una prótesis activa tiene dispositivos activos los cuales facilitan o cumplen con alguna funcionalidad dependiendo de qué miembro está reemplazando\cite{5}.
+\begin{itemize}
+\item Prótesis no robotizada: no posee ningún dispositivo electrónico que lo haga funcionar, lo que la convierte en una prótesis pasiva. 
+\item Prótesis activas: Pueden clasificarse según sea el diseño o mecanismo que se usa para su funcionamiento es por lo que a continuación se presentan las categorías a las que pueden pertenecer, la elección del tipo de prótesis, porque es la que va desempeñar el papel principal al nivel de la amputación.
+\end{itemize}
+\textbf{Tipos de prótesis según el sistema actuador.}
+
+\begin{itemize}
+\item Mecánica:  De energía corpórea, que son activas por fuerza propia.
+\item Eléctricas: Son de energía ajena, son activas por fuerza externa, pueden ser Mioelectrica la cual recoge pulsos del cuerpo en mili o micro voltios.
+\item Hibrida: Este tipo de prótesis recoge energía o fuerza propia y energía externa, lo cual hace que sea una prótesis de energía mixta.
+\item Prototipo de pinza Mioelectrica y rotador: Esta Prótesis es una rediseño y construcción de una pinza Mioelectrica, con el objetivo de mejorar la prensión palmar y también reducir el peso esto con respecto a diseño "sistema mecánico para prótesis Mioelectrica".
+\end{itemize}
+
+\textbf{Prótesis de extremidades.}
+
+\textit{Inferiores:} El diseño de una prótesis de un miembro inferior, implica conocer cuál es la biomecánica de dichas extremidades inferiores que se pretende sustituir. Estas prótesis para un miembro inferior del cuerpo implica un poco más de retos, ya que si se pretende diseñar una prótesis de rodilla, pierna o tobillo, estos miembros sostienen todo el peso del cuerpo.
+La prótesis posee un bloque que es el del tobillo el cual se conecta con un tornillo a la pierna, este tobillo permite hacer la flexión plantar, posee una goma en la planta que permite un 15o de libertad para la flexión.
+
+\subsection{Ecuaciones}
+
+En el estudio se analiza el movimiento de flexión-extensión y aducción-abducción, tratando de imitar a la mano humana.
+En primer lugar se establece el estudio de la cadena cinemática directa e inversa de los elementos o articulaciones empleando la metodología de D-HI\cite{6}. Posteriormente se estudia la dinámica para encontrar la relación entre las fuerzas y los movimientos requeridos, para aquello se empleó la formulación general de Fuler-Lagrange.
+\begin{figure} [htp]% figura
+    \centering
+    \includegraphics[width=90mm]{Fórmula 1.png} % archivo
+    \caption{Fórmula 1}
+    \label{grafica}
+\end{figure}
+\newpage
+Donde:
+
+M(q)= matriz de inercias.
+
+C(q, q)= matriz de fuerzas centrífugas y de Coriolisis.
+
+g(q)= vector de pares gravitacionales.
+
+Un gripper robótico de los primeros y segundos dedos sensibles a la presión. Cuenta con 5GDL y realizan los movimientos de presión cilíndrica palmar y por oposición terminal de la mano humana. Se realiza el estudio de la cinemática directa y se utiliza la transformación de D-H. Luego se emplea el análisis de la dinámica del robot para calcular el torque necesario para cada actuador, utilizando la ecuación  general de Torque.
+\begin{figure} [htp]% figura
+    \centering
+    \includegraphics[width=75mm]{Formula 2.png} % archivo
+    \caption{Fórmula 2}
+    \label{grafica}
+\end{figure}
+
+Donde:
+\begin{figure} [htp]% figura
+    \centering
+    \includegraphics[width=45mm]{Figura 5.png} % archivo
+    \caption{Variables}
+    \label{grafica}
+\end{figure}
+
+A continuación se muestran algunas de las ecuaciones de movimiento de Lagrange que son utilizadas para determinar ciertos valores de movimiento y calcular torque.
+
+\begin{figure} [h!]% figura
+    \centering
+    \includegraphics[width=60mm]{Formula3.png} % archivo
+    \caption{Formula 3}
+    \label{grafica}
+\end{figure}
+\newpage
+Donde:
+\begin{figure} [h!]% figura
+    \centering
+    \includegraphics[width=90mm]{Figura6.png} % archivo
+    \caption{Variables}
+    \label{grafica}
+\end{figure}
+
+\begin{figure} [h!]% figura
+    \centering
+    \includegraphics[width=40mm]{Formula5.png} % archivo
+    \caption{Formula 4}
+    \label{grafica}
+\end{figure}
+
+
+Donde: 
+
+\begin{figure} [h!]% figura
+    \centering
+    \includegraphics[width=110mm]{Figura7.png} % archivo
+    \caption{Variables}
+    \label{grafica}
+\end{figure}
+
+\subsection{Simulaciones}
+
+La aplicación de la robótica al mundo de la medicina ha servido para desarrollar nuevos instrumentos quirúrgicos que han posibilitado,  nuevas intervenciones menos invasivas o el desarrollo de prótesis robóticas muy precisas que permitan a alguien que ha perdido una pierna andar de manera natural. Sin embargo, aunque estas manos, brazos o piernas robóticas sean cada vez más precisas, los pacientes deben pasar por un proceso, a veces largo. 
+
+Hay empresas como Touch Bionics que ha desarrollado un simulador que podría permitir a los médicos ajustar al máximo y simular el funcionamiento de la prótesis reduciendo el tiempo de adaptación de los pacientes. Virtu-LIMB es un sistema que consta de una tira de sensores que se colocan en el brazo del paciente y que detectan los movimientos musculares de éste en la acción natural de mover la mano (abrirla, cerrarla, etc). Los sensores transforman esta información en una señal eléctrica que viaja a una base que, a través de Bluetooth, se comunica con un ordenador que traslada el movimiento a una simulación de una prótesis robótica de una mano emulando el movimiento captado. La idea es que el médico sea capaz de trasladar a este simulador una batería de movimientos del paciente que permitan depurar la configuración de la prótesis para que ésta se adapte mejor al paciente y detectar la mejor ubicación posible para colocar los sensores que la harán funcionar\cite{7}.
+
+Así mismo, permite la conexión de una prótesis real por lo que tanto paciente y médico pueden ver el comportamiento de ésta en vivo y, en caso de disfuncionalidad, compararlo con el simulador que tienen en el ordenador. De hecho, también servirá como centro demostrador (para mostrar las prótesis a los pacientes) y como dispositivo de entrenamiento (para que los pacientes se vayan haciendo al funcionamiento de la prótesis).
+
+
+
+
+
+\section{Conclusiones}
+
+El proceso que conlleva el desarrollo de prótesis, como ya vimos, es muy meticuloso. Para el diseño y construcción de una prótesis de mano se involucran varias áreas de la ingeniería mecánica y electrónica como diseño de mecanismos, mecanizado de materiales, diseño del control, programación del control juntamente con el interfaz entre el hombre y la máquina. En estos últimos años, el desarrollo tecnológico ha crecido enormemente y el gran responsable de este avance es el hombre que en su afán de buscar soluciones a los problemas que se presentan en la sociedad, ha logrado dar grandes pasos con el fin de facilitar las condiciones de vida. En lo que se refiere a la evolución tecnológica de prótesis de mano usando tecnología actual se ha logrado grandes avances permitiendo la fabricación de prototipos que emulan en gran porcentaje los movimientos que la mano humana realiza.
+
+
+\bibliography{bib}
+\bibliographystyle{plainnat}
+\end{document}
