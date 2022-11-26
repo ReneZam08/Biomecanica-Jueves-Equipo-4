@@ -1,0 +1,314 @@
+ \documentclass{article}
+\setlength{\parskip}{5pt} % esp. entre parrafos
+\setlength{\parindent}{0pt} % esp. al inicio de un parrafo
+\usepackage{amsmath} % mates
+\usepackage[sort&compress,numbers]{natbib} % referencias
+\usepackage{url} % que las URLs se vean lindos
+\usepackage[top=25mm,left=20mm,right=20mm,bottom=25mm]{geometry} % margenes
+\usepackage{hyperref} % ligas de URLs
+\usepackage{graphicx} % poner figuras
+\usepackage[spanish]{babel} % otros idiomas
+\usepackage[utf8]{inputenc}
+\usepackage{float}
+\author{Ana Lucio,
+Ana Carbajal,
+Eduardo Rivera,
+César Luna,
+René Zamora} % author
+\title{PIA\\ "Prótesis de dedo índice con filamento ABS"} % titulo
+\date{\today}
+
+\begin{document} % inicia contenido
+
+\maketitle % cabecera
+
+
+\section{OBJETIVO}
+La finalidad de este proyecto es realizar una prótesis de dedo índice funcional que sea cómoda, accesible económicamente y sencilla, así mismo consideramos muy importante el tema de la ecología, es por esto que decidimos emplear el material de filamento ABS para plasmar nuestro diseño, ya que es un material eco friendly.
+
+
+\section{INTRODUCCIÓN}
+A lo largo del reporte abordaremos los temas que consideramos al momento de realizar nuestra protesis, para el diseño y mecanismo empezamos desde 0, investigando sobre la biomecanica del hueso para tener una mejor idea de como reemplazarlo, también sobre la anatomía de la mano para posteriormente poder entender a profundidad la anatomía del dedo índice y poder sustituir de manera artificail los extensores que hacen el movimiento del dedo. 
+
+Una vez que comprendimos como funciona todo en conjunto pudimos empezar a diseñar nuestra protesis, el diseño se realizó en SolidWorks, tomando en cuenta la anatomía y biomecanica del dedo.
+
+\section{DESARROLLO}
+
+\subsection{\textbf{Biomecánica del hueso}}
+
+El hueso puede considerarse tanto como un tejido, como una estructura; así mismo desempeña dos tipos de funciones fundamentales:
+
+-\textbf{Funciones mecánicas}: De soporte del organismo y de protección de los órganos internos.
+
+\textbf{-Funciones fisiológicas}: De control del metabolismo del calcio, fósforo y magnesio.
+
+El osteoblasto es la célula que produce el hueso, es la responsable de la síntesis, organización del colágeno y de las proteinas no colágenas de éste.
+
+El osteoblasto es la célula que produce el hueso, es la responsable de la síntesis, organización del colágeno y de las proteínas no colágenas de éste.
+
+La matriz ósea es la responsable de las propiedades biomecánicas del hueso; el colágeno le proporciona flexibilidad y resistencia a la tensión; las sales minerales le dan dureza, rigidez y resistencia a la comprensión.
+
+\newpage
+\subsection{\textbf{Anatomía de la mano}}
+
+Las manos son el principal órgano para la manipulación física del medio. Las puntas de los dedos contienen una de las zonas con más terminaciones nerviosas del cuerpo humano; son la principal fuente de información táctil sobre el entorno, por lo que el sentido del tacto se asocia inmediatamente con las manos.
+
+Cada mano posee 27 huesos, 8 en el carpo, 5 metacarpianos y un total de 14 falanges. En conjunto forman un canal de concavidad anterior por el que se deslizan los tendones de los músculos flexores de los dedos\cite{apastyle3}.
+
+\begin{figure} [htp]% figura
+    \centering
+    \includegraphics[width=110mm]{Foto1.png} % archivo
+    \caption{Anatomía de la mano}
+    \label{grafica}
+\end{figure}
+
+Cada dedo, con excepción del dedo pulgar, consta de tres segmentos óseos: La falange. El pulgar presenta solamente dos. Se designan con los nombres de falange proximal, media y distal.
+
+Las falanges son huesos largos, presentan un cuerpo y dos extremos: la base y la cabeza de la falange.
+
+\textbf{Falange proximal:}
+
+\begin{itemize}
+\item Cuerpo: es semi cilíndrico, convexo posteriormente y ligeramente cóncavo anteriormente.
+\item Base: presenta una cavidad glenoidea para la cabeza del metacarpiano y dos carillas palmarés para los huesos sesamoideos y dos tubérculos laterales, determinados para la inserción de los ligamentos colaterales de las articulación metacarpo falángica.
+\item Cabeza: termina en una tróclea relacionada con la base de la falange media. La superficie articular se extiende ampliamente sobre la cara palmar de la cabeza.
+\end{itemize}
+\textbf{Falange media:}
+
+\begin{itemize}
+\item Cuerpo: es semejante al de la falange proximal.
+\item Base: provista de una superficie articular formada por dos vertientes laterales separadas en una cresta roma.
+\item Cabeza: presenta la misma configuración que la de la falange proximal.
+\end{itemize}
+\textbf{Falange distal:}
+
+\begin{itemize}
+\item Cuerpo: es muy corto, convexo dorsalmente, y plano en su cara palmar.
+\item Base: es semejante al de la falange media.
+\item Extremo distal: ancho y convexo posteriormente, presenta en su cara palmara una superficie rugosa y saliente de forma de herradura.
+\end{itemize}
+\textbf{Falange del dedo pulgar:}
+
+\begin{itemize}
+\item Falange proximal: semejante a las otras falanges proximales de los otros dedos.
+\item Falange distal: es análoga a la falange distal.
+\end{itemize}
+Las dos falanges del dedo pulgar son más voluminosas que las de los otros dedos.
+
+\begin{figure} [htp]% figura
+    \centering
+    \includegraphics[width=100mm]{Huesos.png} % archivo
+    \caption{Huesos de la mano izquierda}
+    \label{grafica}
+\end{figure}
+
+\newpage
+\subsection{\textbf{Dedo índice}}
+
+El dedo índice es el segundo dedo de la mano, y se encuentra entre el dedo pulgar y el dedo cordial o dedo medio. Es el dedo más expresivo: sirve para señalar direcciones u objetos, enfatizar instrucciones u órdenes, asimismo en conjunto con sus otros 4 compañeros pueden realizar funciones motoras.
+
+La flexión activa alcanza casi 90°; posee mayor amplitud de movimientos de abducción y aducción puede llegar a 30° (realizados con independencia de los demás dedos); su rotación axial interna llega hasta 45°, en cambio, su rotación axial externa es casi nula\cite{voegeli2000lecciones}.
+
+\begin{figure} [htp]% figura
+    \centering
+    \includegraphics[width=55mm]{DedoIndice.png} % archivo
+    \caption{Anatomía del dedo indice}
+    \label{grafica}
+\end{figure}
+ 
+ \begin{figure} [htp]% figura
+    \centering
+    \includegraphics[width=65mm]{DedoIndice2.png} % archivo
+    \caption{Anatomía del dedo índice}
+    \label{grafica}
+\end{figure}
+\newpage
+
+ \begin{figure} [htp]% figura
+    \centering
+    \includegraphics[width=18cm]{dedo biónico.png} % archivo
+    \caption{Visión lateral de las insercciones tendinosas del dedo índice (los tendones se han separado de sus vainas).}
+    \label{grafica}
+\end{figure}
+
+\subsection{\textbf{Medidas del dedo índice}}
+
+\begin{table}[H]
+\begin{center}
+\label{table1} 
+\begin{tabular}{cccccccc} %change to cc for 2 columns
+\hline
+\multicolumn{1}{c}{} & \multicolumn{1}{c}{} & \multicolumn{1}{c}{Mínimo}& \multicolumn{1}{c}{Máximo} & 
+\multicolumn{1}{c}{Media} & \multicolumn{1}{c}{DE°}& \multicolumn{1}{c}{Mediana} & \multicolumn{1}{c}{IRQ°} \\
+\hline
+&  H & 65.61 & 81.05 & 74.61987 & 3.475096 & 74.95 & 4.350002\\
+índice(mm)   &  M & 59.61 & 81.05 & 4.17262 & 69.34467 & 68.68 & 5.580002\\
+&  Total & 59.61 & 81.05 & 71.99974 & 4.650856 & 72.69 & 7.029999\\
+
+\hline
+\end{tabular}
+\end{center}
+\end{table}
+\begin{center} \textbf {Tabla 1. Medidas del dedo índice} \end{center}
+
+En hombres se registra una medida mínima de 65.61mm y máxima de 81.05mm, en el caso de las mujeres el mínimo es 59.61mm y el máximo es de 81.05mm.
+
+En hombres la longitud del dedo índice tuvo un promedio de 74,62 mm, mientras que en mujeres fue de 69,34 mm.
+
+\newpage
+\section{NUESTRA PROTESIS}
+Para nuestro proyecto, decidimos diseñar la prótesis de un dedo índice, esto se llevó a cabo mediante el programa SolidWorks, posteriormente se imprimió el modelo en una impresora 3D utilizando filamento ABS.
+
+El filamento de ABS tiene propiedades significativas que lo convierten en una gran opción, como su resistencia y el hecho de que es ligero, mientras que también puede manejar muchos productos químicos diferentes. El material ABS también es reciclable, lo que significa que es mejor para el medio ambiente que algunos otros plásticos al causar menos residuos.
+
+A continuación podemos observar algunas de las especificaciones de este material:
+
+
+\begin{figure} [htp]% figura
+    \centering
+    \includegraphics[width=140mm]{Caracteristicas} % archivo
+    \caption{Características del filamento ABS}
+    \label{grafica}
+\end{figure}
+
+\section{DISEÑO}
+
+\begin{figure}[H]
+ \centering
+  \subfloat{
+   \label{f:gato}
+    \includegraphics[width=0.7\textwidth]{fd1.jpeg}}
+  \subfloat{
+   \label{f:tigre}
+    \includegraphics[width=0.49\textwidth]{fd2.jpeg}}
+  \subfloat{
+   \label{fd2}
+    \includegraphics[width=0.49\textwidth]{fd4.jpeg}}
+ \caption{Falange distal}
+ \label{f:animales}
+\end{figure}
+
+\begin{figure}[H]
+ \centering
+  \subfloat{
+   \label{f:gato}
+    \includegraphics[width=0.7\textwidth]{FM3.jpeg}}
+  \subfloat{
+   \label{f:tigre}
+    \includegraphics[width=0.45\textwidth]{FM2.jpeg}}
+  \subfloat{
+   \label{fd2}
+    \includegraphics[width=0.45\textwidth]{FM1.jpeg}}
+ \caption{Falange media}
+ \label{f:animales}
+\end{figure}
+
+\begin{figure}[H]
+ \centering
+  \subfloat{
+   \label{f:gato}
+    \includegraphics[width=0.8\textwidth]{fp2.jpeg}}
+  \subfloat{
+   \label{f:tigre}
+    \includegraphics[width=0.45\textwidth]{fp1.jpeg}}
+  \subfloat{
+   \label{fd2}
+    \includegraphics[width=0.45\textwidth,height=6.6cm,angle=0]{fp3.jpeg}}
+ \caption{Falange proximal}
+ \label{f:animales}
+\end{figure}
+
+\section{MATERIALES}
+Para la realización de la protesis funcional utilizamos los siguientes materiales:
+
+\\-Filamento ABS
+\\-Servomotor MOT-100
+\\-Arduino UNO
+\\-Sensor ultrasónico
+\\-2 Clavos
+\\-Base de madera
+\\-Alambre 0.03mm
+
+\newpage
+
+\section{PROCESO DE ELABORACIÓN}
+
+1. Empezamos creando el diseño en SolidWorks, tomando en cuenta todas las especificaciones necesarias.
+
+\begin{figure} [H]% figura
+    \centering
+    \includegraphics[width=15cm]{text.jpeg} % archivo
+    \label{grafica}
+\end{figure}
+
+2. Posteriormente mandamos a imprimir nuestro ensamble simulado en una impresora 3D.
+
+\begin{figure} [H]% figura
+    \centering
+    \includegraphics[width=4cm]{dedoe.png} % archivo
+    \label{grafica}
+\end{figure}
+\newpage
+3. Una vez listo el prototipo fisico, pasamos a ensamblar las 3 falanges manteniéndolas unidas con clavos para que tuviera una buena movilidad.
+
+\begin{figure} [H]% figura
+    \centering
+    \includegraphics[width=10cm]{cab.jpeg} % archivo
+    \label{grafica}
+\end{figure}
+
+4. Cuando terminamos el ensamble, por los orificios que dejamos pasamos un cable de 0.03mm, esto para simular los extensores y poder generar movilidad a través del servomotor.\\
+
+5. Teniendo el elastico dentro de los orificos, procedimos a conectar el servomotor a los elasticos para que a través de un código programado en arduino el servomotor fuera capaz de mover de manera automatica el dedo.
+
+\begin{figure} [H]% figura
+    \centering
+    \includegraphics[width=15cm]{com.jpeg} % archivo
+    \label{grafica}
+\end{figure}
+\newpage
+\section{CÓDIGO}
+
+\begin{figure} [htp]% figura
+    \centering
+    \includegraphics[width=190mm]{código11.jpg} % archivo
+    \caption{Código de arduino}
+    \label{grafica}
+\end{figure}
+
+\begin{figure} [htp]% figura
+    \centering
+    \includegraphics[width=190mm]{código22.jpg} % archivo
+    \caption{Código de arduino}
+    \label{grafica}
+\end{figure}
+
+
+
+
+\newpage
+\section{CONCLUSIONES}
+La pérdida de extremidades, independientemente de la causa, ha sido una necesidad que debe ser cubierta para todas aquellas personas que han sufrido daños o pérdidas de alguna parte de su cuerpo,  por lo tanto, concordamos en que es una problemática a la que se le debe dar solución. 
+Afortunadamente, con el paso del tiempo los inventos en los campos de la robótica, en particular de la biónica, han proporcionado al ser humano extremidades complementarias que cada día se perfeccionan. 
+
+En este artículo, los autores, presentan los diversos experimentos electromecánicos que se han realizado a lo largo de los años para innovar “Diseño de prótesis Inteligentes” y perfeccionar la construcción de una prótesis inteligente de miembro superior\cite{apastyle2}.
+
+Realizar una protesis es un proceso minucioso de investigación que requiere de tiempo y dedicación, ya que no es simplemente saber sobre la parte electronica o mecánica, sino que es importante tomar en cuenta la parte medica, es decir, la anatomía que involucra la creación o adapatación de una extremidad al cuerpo humano. En nuesto caso fue mas sencillo, ya que la protesis elaborada fue de un solo dedo; el dedo índice, este dedo es uno de los que más utilizamos en nuestra vida diaria, uno de estos usos es sostener un lápiz o simular una pinza para agarrar o sostener algo. 
+
+Tras el desarrollo de este proyecto se evidenció la importancia de conocer y aplicar
+todos los conocimientos en anatomía, ya que comprendiendo como está constituido
+cada hueso, musculo y articulación del dedo índice, se pudo presentar un diseño que
+permitirá reemplazar o proveer una parte del cuerpo faltante, independientemente de
+la causa de la pérdida. Podemos concluir que se consiguió diseñar un dedo antropomórfico de 3 grados de libertad el cual emula el
+movimiento del dedo humano\cite{apastyle}.
+
+\newpage
+
+
+
+\bibliography{bib}
+\bibliographystyle{plainnat}
+
+
+\end{document}
+
